@@ -42,7 +42,7 @@ header {
             left: 0;
             content: "";
             width: 100%;
-            border-bottom: 5px solid pink;
+            border-bottom: 5px solid #F3D0C7;
             z-index: -1;
         }
     }
