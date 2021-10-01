@@ -33,7 +33,50 @@
       <img src="./assets/img/h-2-port-img-5.jpg" alt="">
       <img src="./assets/img/h-2-port-img-6.jpg" alt="">
     </section>
-    <section id="workingProcess"></section>
+    <section id="workingProcess">
+      <div class="container">
+        <h1>Working process</h1>
+        <div class="wrapper">
+          <img src="./assets/svg/svg-3.svg" alt="">
+          <div class="card">
+            <div class="circle">
+              <i class="far fa-lightbulb"></i>
+            </div>
+            <div class="text">
+              <h4>First there is an idea</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="circle">
+              <i class="far fa-comment"></i>
+            </div>
+            <div class="text">
+              <h4>Then we talk about</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="circle">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <div class="text">
+              <h4>And we think about</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="circle">
+              <i class="fas fa-pencil-alt"></i>
+            </div>
+            <div class="text">
+              <h4>So we draw along</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="workWithUs"></section>
     <section id="blog"></section>
     <Footer />
@@ -139,6 +182,75 @@ export default {
   flex-wrap: wrap;
   img {
     width: calc(100% / 3);
+  }
+}
+
+#workingProcess {
+  .container {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding: 50px 0;
+    h1 {
+      font-size: 60px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+    .wrapper {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: -1;
+        width: 80%;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(100% / 4);
+        padding: 10px;
+        .circle {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          margin-bottom: 20px;
+          background-color: #FAF7F1;
+          i {
+            font-size: 40px;
+          }
+          .fa-lightbulb {
+            color: #C0E1CF;
+          }
+          .fa-cloud {
+            color: #80465F;
+          }
+          .fa-comment {
+            color: #F8D12D;
+          }
+          .fa-pencil-alt {
+            color: #EB6950;
+          }
+        }
+        .text {
+          h4 {
+            margin-bottom: 10px;
+          }
+          p {
+            font-size: 11px;
+            line-height: 20px;
+            color: gray;
+          }
+        }
+      }
+    }
   }
 }
 </style>
