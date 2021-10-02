@@ -7,7 +7,7 @@
       </div>
       <div class="container">
         <div class="left">
-          <h1>Devotion that never ends</h1>
+          <h1>Devotion that never <span class="lobster-font">ends</span></h1>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure eligendi, deleniti aspernatur adipisci quibusdam et assumenda porro</p>
           <div class="button">READ MORE</div>
         </div>
@@ -35,7 +35,7 @@
     </section>
     <section id="workingProcess">
       <div class="container">
-        <h1>Working process</h1>
+        <h1>Working <span class="lobster-font">process</span></h1>
         <div class="wrapper">
           <img src="./assets/svg/svg-3.svg" alt="">
           <div class="card">
@@ -77,8 +77,29 @@
         </div>
       </div>
     </section>
-    <section id="workWithUs"></section>
-    <section id="blog"></section>
+    <section id="workWithUs">
+      <h1>want to work with us? Send us <span class="lobster-font">a message!</span></h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, quae eaque veritatis enim reprehenderit reiciendis doloremque molestias corrupti sed beatae. Earum qui adipisci voluptas natus, laboriosam asperiores aut deserunt nemo!</p>
+      <div class="button">CONTACT</div>
+    </section>
+    <section id="blog">
+      <div class="container">
+        <div class="card">
+          <img src="./assets/img/h-2-blog-img-1.jpg" alt="">
+          <h4>This way, loves: a detailed guide through new design</h4>
+          <p class="lobster-font">By Emily Fields</p>
+        </div>
+        <div class="card">
+          <img src="./assets/img/h-2-blog-img-2.jpg" alt="">
+          <h4>I try to give people a different way of looking art</h4>
+          <p class="lobster-font">By Emily Fields</p>
+        </div><div class="card">
+          <img src="./assets/img/h-2-blog-img-3.jpg" alt="">
+          <h4>Introduce Richard Laperrière of those amazing features</h4>
+          <p class="lobster-font">By Emily Fields</p>
+        </div>
+      </div>
+    </section>
     <Footer />
   </div>
 </template>
@@ -97,11 +118,24 @@ export default {
 
 <style lang="scss">
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+}
+.lobster-font {
+  font-family: 'Lobster', cursive;
+}
+.container {
+  width: 60%;
+  margin: auto;
+}
+p {
+  font-size: 12px;
+  line-height: 25px;
+  color: gray;
 }
 
 #slider {
@@ -112,8 +146,6 @@ export default {
   padding: 70px 0;
   .container {
     display: flex;
-    width: 60%;
-    margin: auto;
     .left {
       width: 50%;
       h1 {
@@ -243,12 +275,51 @@ export default {
           h4 {
             margin-bottom: 10px;
           }
-          p {
-            font-size: 11px;
-            line-height: 20px;
-            color: gray;
-          }
         }
+      }
+    }
+  }
+}
+
+#workWithUs {
+  padding: 100px 250px;
+  background-image: url(./assets/img/h-2-background-1.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  h1 {
+    font-size: 50px;
+    font-weight: 300;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+  p { 
+    margin-bottom: 30px;
+  }
+  .button {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: #C0E1CF;
+  }
+}
+
+#blog {
+  .container {
+    display: flex;
+    padding: 70px 0;
+    .card {
+      display: flex;
+      flex-direction: column;
+      width: calc(100% / 3);
+      padding: 10px;
+      img {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      h4 {
+        line-height: 25px;
       }
     }
   }
